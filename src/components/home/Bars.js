@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Bar } from "./Bar";
 
-const Bars = ({ bars }) => {
+export const Bars = ({ bars }) => {
   const barsList = bars.map(bar => {
     return (
       <Bar
@@ -15,11 +15,10 @@ const Bars = ({ bars }) => {
       />
     );
   });
+
   return <div>{barsList}</div>;
 };
 
 Bars.propTypes = {
-  bars: PropTypes.object.isRequired
+  bars: PropTypes.array.isRequired
 };
-
-export default Bars;

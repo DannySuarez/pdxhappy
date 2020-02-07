@@ -259,7 +259,7 @@ const bars = [
   },
   {
     id: "punch-bowl-social",
-    name: "Kells Irish Pub",
+    name: "Punch Bowl Social",
     quadrant: "Downtown",
     district: "Downtown",
     address: "340 SW Morrison St",
@@ -310,8 +310,8 @@ const bars = [
     days: "Tuesday - Friday (All day Monday)"
   },
   {
-    id: "the-rambler",
-    name: "The Rambler",
+    id: "interurban",
+    name: "Interurban",
     quadrant: "North",
     district: "Mississippi",
     address: "4057 N Mississippi Ave",
