@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import { Bar } from "./Bar";
 
 export const Bars = ({ bars }) => {
@@ -16,9 +17,15 @@ export const Bars = ({ bars }) => {
     );
   });
 
-  return <div>{barsList}</div>;
+  return <BarsWrapper>{barsList}</BarsWrapper>;
 };
 
 Bars.propTypes = {
   bars: PropTypes.array.isRequired
 };
+
+const BarsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 5rem;
+`;
