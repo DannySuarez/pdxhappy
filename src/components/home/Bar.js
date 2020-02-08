@@ -21,6 +21,15 @@ export const Bar = ({ name, district, address, time, days, website }) => {
   );
 };
 
+Bar.propTypes = {
+  name: PropTypes.string.isRequired,
+  district: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  days: PropTypes.string.isRequired,
+  website: PropTypes.string
+};
+
 const BarWrapper = styled.div`
   box-shadow: 10px -10px 0 #37474a;
   display: grid;
@@ -35,12 +44,3 @@ const Section = styled.section`
     color: #37474a;
   }
 `;
-
-Bar.propTypes = {
-  name: PropTypes.string.isRequired,
-  district: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  days: PropTypes.string.isRequired,
-  website: PropTypes.string
-};
