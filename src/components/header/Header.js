@@ -1,6 +1,5 @@
-import React from "react";
-// import "./styles.css";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export const Header = () => {
   return (
@@ -15,12 +14,15 @@ export const Header = () => {
 
 const HeaderWrapper = styled.header`
   text-align: center;
-  background-color: #FFC600;
-
-  h1 {
-   @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-    font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-  }
   font-size: 1.5rem;
+  color: #e3dbd5;
+  h1 {
+    @import url("https://fonts.googleapis.com/css?family=Pacifico|Fira+Mono&display=swap");
+    font-family: "Pacifico", cursive;
+    font-size: 2rem;
+    color: #37474a;
+  }
+  p {
+    font-family: "Fira Mono", monospace;
+  }
 `;
