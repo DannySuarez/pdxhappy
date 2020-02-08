@@ -1,7 +1,8 @@
 {
   "name": "pdxhappy",
   "version": "1.0.0",
-  "description": "",
+  "author": "Danny Suarez",
+  "description": "It it Happy Hour?",
   "main": "src/index.js",
   "jest": {
     "setupFilesAfterEnv": [
@@ -28,6 +29,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {

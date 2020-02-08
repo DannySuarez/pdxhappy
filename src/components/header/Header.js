@@ -1,10 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
+import twitterCard from '../../images/twitter.png';
 
 export const Header = () => {
   return (
     <>
       <HeaderWrapper>
+        <Helmet>
+          <html lang="en" amp />
+          <title>PDX Happy Hour</title>
+          <meta name="description" content="A List of Portland Bars with Happy Hours" />
+          <link rel="canonical" href="https://pdxhappy.netlify.com/" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content="@dannysuarezpdx" />
+          <meta name="twitter:title" content="PDX Happy Hour" />
+          <meta name="twitter:description" content="A List of Portland Bars with Happy Hours" />
+          <meta name="twitter:image" content={`${twitterCard}`} />
+        </Helmet>
         <h1>PDX Happy Hour</h1>
         <p>A List of Portland Bars with Happy Hours</p>
       </HeaderWrapper>
