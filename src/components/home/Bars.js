@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Bar } from './Bar';
+import { Search } from '../search/Search';
+import { useSearch } from '../hooks/useSearch';
 
 export const Bars = ({ bars }) => {
-  const barsList = bars.map(bar => {
+  const { filter, onSearch } = useSearch();
+
+  const filteredbars = bars.filter(bar => bar.name.toLowerCase().indexOf(filter) !== -1);
+  
+  const barsList = filteredbars.map(bar => {
     return (
       <Bar
         key={bar.name}
@@ -18,7 +24,14 @@ export const Bars = ({ bars }) => {
     );
   });
 
-  return <BarsWrapper>{barsList}</BarsWrapper>;
+  return (
+    <>
+      <Search onSearch={onSearch} />
+      <BarsWrapper>
+        {barsList}
+      </BarsWrapper>
+    </>
+  );
 };
 
 Bars.propTypes = {
