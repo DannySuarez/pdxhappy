@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 import twitterCard from '../../../static/twitter.png';
 
 export const Header = () => {
+  const WEBSITE = 'https://pdxhappystaging.netlify.com;';
+
   return (
     <>
       <HeaderWrapper>
@@ -16,7 +18,7 @@ export const Header = () => {
           <meta name="twitter:creator" content="@dannysuarezpdx" />
           <meta name="twitter:title" content="PDX Happy Hour" />
           <meta name="twitter:description" content="A List of Portland Bars with Happy Hours" />
-          <meta name="twitter:image" content={`${twitterCard}`} />
+          <meta name="twitter:image" content={`${WEBSITE}${twitterCard}`} />
         </Helmet>
         <h1>PDX Happy Hour</h1>
         <p>A List of Portland Bars with Happy Hours</p>
