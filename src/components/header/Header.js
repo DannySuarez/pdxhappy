@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import twitterCard from '../../../static/twitter.png';
 
 export const Header = () => {
-  const WEBSITE = 'https://pdxhappystaging.netlify.com;';
+  const WEBSITE = 'https://pdxhappystaging.netlify.com';
 
   return (
     <>
