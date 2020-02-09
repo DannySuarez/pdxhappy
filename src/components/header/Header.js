@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import twitterCard from '../../../static/twitter.png';
 
 export const Header = () => {
@@ -13,7 +13,7 @@ export const Header = () => {
           <html lang="en" amp />
           <title>PDX Happy Hour</title>
           <meta name="description" content="A List of Portland Bars with Happy Hours" />
-          <link rel="canonical" href="https://pdxhappy.netlify.com/" />
+          <link rel="canonical" href="https://pdxhappystaging.netlify.com" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:creator" content="@dannysuarezpdx" />
           <meta name="twitter:title" content="PDX Happy Hour" />
