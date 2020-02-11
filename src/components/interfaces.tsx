@@ -9,12 +9,12 @@ interface Bar {
   district: string,
   address: string,
   dateNight: boolean,
-  beer: string,
+  beer?: string,
   food?: string,
   liquor?: string,
   time: string,
   days: string,
-  website?: string
+  website?: (string | undefined)
 }
 
 export interface BarProps {
@@ -23,5 +23,5 @@ export interface BarProps {
   address: string,
   time: string,
   days: string,
-  website?: string,
+  website: (string | undefined),
 }
