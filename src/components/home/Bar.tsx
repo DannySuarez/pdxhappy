@@ -1,16 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type Props = {
-  name: string,
-  district: string,
-  address: string,
-  time: string,
-  days: string,
-  website: string,
-}
+import { BarProps } from '../interfaces'
 
-export const Bar: React.FC<Props> = ({ name, district, address, time, days, website }) => {
+export const Bar: React.FC<BarProps> = ({ name, district, address, time, days, website }) => {
 
   const linkToWebsite = website ? 
     <a href={website}> <h3>{name}</h3> </a>

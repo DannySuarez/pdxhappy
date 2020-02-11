@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Bar } from './Bar';
 import { Search } from '../search/Search';
 import { useSearch } from '../hooks/useSearch';
 
-export const Bars = ({ bars }) => {
+import { BarsInterface } from '../interfaces'
+
+export const Bars = ({ bars }: BarsInterface) => {
   const { filter, onSearch } = useSearch();
 
   const filteredbars = bars.filter(bar => bar.name.toLowerCase().indexOf(filter) !== -1);
@@ -32,10 +33,6 @@ export const Bars = ({ bars }) => {
       </BarsWrapper>
     </>
   );
-};
-
-Bars.propTypes = {
-  bars: PropTypes.array.isRequired
 };
 
 const BarsWrapper = styled.div`
