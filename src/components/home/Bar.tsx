@@ -1,8 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-export const Bar = ({ name, district, address, time, days, website }) => {
+type Props = {
+  name: string,
+  district: string,
+  address: string,
+  time: string,
+  days: string,
+  website: string,
+}
+
+export const Bar: React.FC<Props> = ({ name, district, address, time, days, website }) => {
 
   const linkToWebsite = website ? 
     <a href={website}> <h3>{name}</h3> </a>
@@ -19,15 +27,6 @@ export const Bar = ({ name, district, address, time, days, website }) => {
       </Section>
     </BarWrapper>
   );
-};
-
-Bar.propTypes = {
-  name: PropTypes.string.isRequired,
-  district: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  days: PropTypes.string.isRequired,
-  website: PropTypes.string
 };
 
 const BarWrapper = styled.div`
