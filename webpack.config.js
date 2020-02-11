@@ -5,10 +5,13 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 // eslint-disable-next-line
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.[hash].js',
     publicPath: '/'
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
   },
   devServer: {
     port: 7890,
@@ -27,13 +30,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true
-          }
+          loader: 'ts-loader',
+          
         }
       },
       {
