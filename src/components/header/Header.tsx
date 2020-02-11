@@ -10,7 +10,7 @@ export const Header = () => {
     <>
       <HeaderWrapper>
         <Helmet>
-          <html lang="en" amp />
+          <html lang="en" />
           <title>PDX Happy Hour</title>
           <meta name="description" content="A List of Portland Bars with Happy Hours" />
           <link rel="canonical" href="https://pdxhappystaging.netlify.com" />
