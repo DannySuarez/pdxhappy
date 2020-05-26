@@ -3,8 +3,8 @@ import { useState } from 'react';
 export const useSearch = () => {
   const [filter, setFilter] = useState('');
 
-  const onSearch = e => {
-    setFilter(e.target.value.toLowerCase());
+  const onSearch = (event: React.FormEvent<HTMLInputElement>) => {
+    setFilter(event.currentTarget.value.toLowerCase());
   };
 
   return { filter, onSearch };
