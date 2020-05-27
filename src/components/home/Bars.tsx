@@ -6,7 +6,7 @@ import { useSearch } from '../hooks/useSearch';
 
 import { BarsInterface } from '../interfaces'
 
-export const Bars = ({ bars }: BarsInterface) => {
+export const Bars: React.FC<BarsInterface> = ({ bars }) => {
   const { filter, onSearch } = useSearch();
 
   const filteredbars = bars.filter(bar => bar.name.toLowerCase().indexOf(filter) !== -1);
