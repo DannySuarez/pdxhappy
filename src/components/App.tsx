@@ -5,7 +5,7 @@ import { Footer } from './footer/Footer';
 import styled, { createGlobalStyle } from 'styled-components';
 import 'normalize.css';
 
-export default function App() {
+const App = () => {
   return (
     <>
       <GlobalStyle />
@@ -17,6 +17,8 @@ export default function App() {
     </>
   );
 }
+
+export default App;
 
 const GlobalStyle = createGlobalStyle`
   html {
